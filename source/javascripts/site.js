@@ -2,11 +2,11 @@
 //= require popper
 //= require bootstrap-sprockets
 
-var initialAnim = 1000
+var initialAnim = 1500
 
 var headline = {
-    distance: '20%',
-    origin: 'bottom',
+    distance: '50%',
+    origin: 'top',
     opacity: 0,
     duration: initialAnim,
     easing: 'ease-out'
