@@ -5,6 +5,11 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :sprockets do |c|
+  c.expose_middleman_helpers = true
+end
+
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -44,3 +49,12 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+configure :build do
+  ignore '*.psd'
+  ignore 'fonts/**'
+  activate :minify_css
+  activate :minify_javascript
+
+  set :http_prefix, "/media/engineeringx"
+end

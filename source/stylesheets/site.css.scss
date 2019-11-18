@@ -1,24 +1,84 @@
+@import "bootstrap";
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/regular.scss";
+@import "fontawesome/solid.scss";
+
 body {
-  background-color: #fbc547;
+  background-color: #ebeded;
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
     "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
     "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
     "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
   text-align: center;
-}
-
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+  table {
+    text-align: left;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.container {
+  @include media-breakpoint-up(xs) { max-width: 320px; }
+  @include media-breakpoint-up(sm) { max-width: 600px; }
+  @include media-breakpoint-up(md) { max-width: 800px; }
+  @include media-breakpoint-up(lg) { max-width: 800px; }
+}
+
+#carousel {
+  .carousel-inner {
+    .carousel-item {
+      >img {
+        @include media-breakpoint-up(xs) {
+          height: 240px;
+          width: 320px;
+        }
+        @include media-breakpoint-up(sm) {
+          height: 450px;
+          width: 600px;
+        }
+        @include media-breakpoint-up(md) {
+          height: 600px;
+          width: 800px;
+        }
+      }
+    }
+  }
+}
+
+.bg-dark {
+  background-color: #07294d !important;
+}
+
+h1.engineeringX {
+  text-transform: uppercase;
+  color: #ff0000;
+  font-weight: bolder;
+  small {
+    font-weight: normal;
+    color: #ffffff;
+  }
+   @include media-breakpoint-up(xs) { font-size: 30px; }
+   @include media-breakpoint-up(sm) { font-size: 48px; }
+   @include media-breakpoint-up(md) { font-size: 56px; }
+}
+
+.headline {
+  h1, h2, p {
+    text-shadow: 2px 2px 3px black;
+  }
+  button {
+    box-shadow: 2px 2px 3px black;
+  }
+ @include media-breakpoint-up(xs) { 
+    h2 { font-size: .9em; }
+    p { font-size: .7em; }    
+  }
+  @include media-breakpoint-up(sm) { 
+    h2 { font-size: 1em; }
+    p { font-size: .75em; }    
+  }
+
+}
+
+strong {
+  font-weight: bold !important;
 }
