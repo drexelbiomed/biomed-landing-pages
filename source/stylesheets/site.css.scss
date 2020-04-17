@@ -28,15 +28,15 @@ body {
     .carousel-item {
       >img {
         @include media-breakpoint-up(xs) {
-          height: 240px;
+          height: 320px;
           width: 320px;
         }
         @include media-breakpoint-up(sm) {
-          height: 450px;
+          height: 600px;
           width: 600px;
         }
         @include media-breakpoint-up(md) {
-          height: 600px;
+          height: 800px;
           width: 800px;
         }
       }
